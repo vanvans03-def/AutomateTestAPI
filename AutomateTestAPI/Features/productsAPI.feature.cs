@@ -342,14 +342,18 @@ namespace AutomateTestAPI.Features
             {
                 this.ScenarioStart();
 #line 48
-    testRunner.Given("I have the API endpoint \"https://fakestoreapi.com/products\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have the API endpoint \"https://fakestoreapi.com/products-invalid\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "title",
-                            "price"});
+                            "price",
+                            "description",
+                            "category"});
                 table3.AddRow(new string[] {
-                            "Incomplete",
-                            ""});
+                            "Nonexistent",
+                            "null",
+                            "null",
+                            "null"});
 #line 49
     testRunner.And("I have the following incomplete product data", ((string)(null)), table3, "And ");
 #line hidden

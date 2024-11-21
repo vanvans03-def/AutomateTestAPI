@@ -45,10 +45,10 @@ Feature: Test FakeStore API
     Then the response status should be 404
 
   Scenario: Create a product with missing data
-    Given I have the API endpoint "https://fakestoreapi.com/products"
+    Given I have the API endpoint "https://fakestoreapi.com/products-invalid"
     And I have the following incomplete product data
-      | title       | price |
-      | Incomplete  |       |
+      | title           | price | description  | category |
+      | Nonexistent     | null  |    null      |   null   |
     When I send a POST request to the endpoint with the incomplete product data
     Then the response status should be 404
 
